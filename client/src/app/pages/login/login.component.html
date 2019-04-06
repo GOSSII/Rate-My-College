@@ -5,34 +5,42 @@ Id: 300984229
 Date 29, March 2019 
 */ -->
 
-<main class="container">
-  <div class="row">
-      <div class="col-md-offset-4 col-md-4">
-          <h1>Please Login</h1>
-          <form autocomplete="off" (submit)="onLoginSubmit()">
-              <fieldset class="form-group">
-                  <label for="username">Username:</label>
-                  <input type="text" class="form-control"
-                  [(ngModel)]="user.username"
-                  name="username" placeholder="Enter Username"
-                  id="username" required autofocus autocomplete="off">
-              </fieldset>
-              <fieldset class="form-group">
-                  <label for="password">Password:</label>
-                  <input type="password" class="form-control"
-                  [(ngModel)]="user.password"
-                  name="password" placeholder="Enter Password"
-                  id="password" required autocomplete="off">
-                  or
-                  <a routerLink="/register">Register Here</a>
-              </fieldset>
-              <fieldset class="form-group text-right">
-                  <input type="submit" class="btn btn-success" value="Login">
-                  <a routerLink="/home">
-                      <input type="button" class="btn btn-warning" value="Cancel">
-                  </a>
-              </fieldset>
-          </form>
-      </div>
-  </div>
-</main>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Sign In</h5>
+                    <form autocomplete="off" (submit)="onLoginSubmit()">
+                        <fieldset class="form-group">
+                            <input type="text" class="form-control" [(ngModel)]="user.username" name="username"
+                                placeholder="Username" id="username" required autofocus autocomplete="off">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <input type="password" class="form-control" [(ngModel)]="user.password" name="password"
+                                placeholder="Password" id="password" required autocomplete="off">
+                        </fieldset>
+                        <fieldset class="form-group text-right">
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" value="Login"
+                                type="submit">Sign in</button>
+
+                            <a routerLink="/home">
+
+                                <button class="btn btn-lg btn-warning btn-block text-uppercase"
+                                    value="Cancel">Cancel</button>
+                            </a>
+                            <hr class="my-4">
+                            <a routerLink="/register">
+                                <button class="btn btn-lg btn-info btn-block text-uppercase" value="Register"
+                                    type="submit">Sign Up</button>
+                            </a>
+                        </fieldset>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

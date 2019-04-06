@@ -8,6 +8,7 @@ Date 29, March 2019
 
 /* Custome CSS goes here */
 /* Global CSS */
+
 .navbar{
     padding: 0 40px 0 30px;
 }
@@ -21,10 +22,10 @@ Date 29, March 2019
 }
 
 /* Service Page CSS */
-.card {
+/* .card {
   background-color: #fee151;
   height: 100%;
-}
+} */
 .card .fa,
 .card .fab,
 .card .fas {
