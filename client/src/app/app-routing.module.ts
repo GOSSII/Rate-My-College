@@ -10,7 +10,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Components
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ServicesComponent } from './pages/services/services.component';
@@ -22,9 +22,15 @@ import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, data: {title: 'Home'}},
+  {path: 'admin', component: AdminDashboardComponent, data: {title: 'admin'} ,canActivate: [AuthGuard]},
+
+
+
+
   {path: 'about', component: AboutComponent, data: {title: 'About'}},
   {path: 'products', component: ProductsComponent, data: {title: 'Products'}},
   {path: 'services', component: ServicesComponent, data: {title: 'Services'}},
