@@ -2,10 +2,15 @@
 // Id: 300984229 
 // Date 16, Feb 2019 
 
+let passport = require('passport');
 let express = require('express');
 let router = express.Router();
 let indexController = require('../controllers/index');
 let tDoController = require('../controllers/toDo');
+
+const userController = require('./users');
+
+router.use('/users', userController);
 
 /* GET home page. */
 //  router.get('/', indexController.displayHomePage );
@@ -20,6 +25,11 @@ let tDoController = require('../controllers/toDo');
 
 /* GET ToDO page. */
 //  router.get('/todo', tDoController.displayToDoList);
+
+
+ /* GET ToDO page. */
+//  router.get('/users', userController.getUserActions);
+
 
 /* GET - displays the Login Page */
 //  router.get('/login', indexController.displayLoginPage);

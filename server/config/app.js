@@ -102,7 +102,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use('/api', indexRouter);
-app.use('/api/users', usersRouter);
+app.use('/api/users', passport.authenticate('jwt', {session: false}), usersRouter);
 app.use("/api/projects",projectsRouter);
 app.use('/api/contact',contactRouter);
 app.use("/api/todo", passport.authenticate('jwt', {session: false}), toDoRouter);

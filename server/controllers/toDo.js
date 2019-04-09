@@ -16,7 +16,7 @@ module.exports.displayToDoList = (req, res, next) => {
             //     toDoList: toDoList,
             //     displayName: req.user ? req.user.displayName : ""
             // });
-            res.json({success: true, msg: 'ToDo List Displayed Successfully', toDoList: toDoList, user: req.user});
+            res.json({success: true, msg: 'ToDo List Displayed Successfully', toDoList: toDoList});
         }
     });
 };
