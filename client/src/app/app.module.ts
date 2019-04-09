@@ -37,6 +37,7 @@ import { JwtModule, JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt'
 // Route Guards
 import { AuthGuard } from './guards/auth.guard';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 export function jwtTokenGetter() {
   return localStorage.getItem('id_token');
@@ -59,7 +60,8 @@ export function jwtTokenGetter() {
     LoginComponent,
     ContactDetailsComponent,
     ContactDeleteComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -23,11 +23,12 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, data: {title: 'Home'}},
   {path: 'admin', component: AdminDashboardComponent, data: {title: 'admin'} ,canActivate: [AuthGuard]},
-
+  {path: 'UserProfile', component: UserProfileComponent, data: {title: 'UserProfile'} ,canActivate: [AuthGuard]},
 
 
 
