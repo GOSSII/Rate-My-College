@@ -11,8 +11,8 @@ router
   userController.getUserActions(req, res);
 }).get('/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
   userController.getUserByIdActions(req, res);
-}).post('/edit/:id', (req, res) => {
-  feedbackController.postEditProfileActions(req, res);
+}).put('/edit/:id', (req, res) => {
+  userController.putEditProfileActions(req, res);
 });
 
 module.exports = router;

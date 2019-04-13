@@ -40,6 +40,20 @@ exports.getUserByIdActions = (req, res, next) => {
     });
 }
 // Update User Profile
-exports.postEditProfileActions = (req, res, next) => {
-  res.json("saas");
+exports.putEditProfileActions = (req, res, next) => {
+  let _id = req.params.id;
+if(req.body){
+  User
+  .findOneAndUpdate({ _id: _id }, { $set: { username: req.body.username, email: req.body.email, displayName: req.body.displayName, password : req.body.password} }, function (err, user) {
+    if(err) {
+      console.log(err);
+      res.end(err);
+  }
+  else {
+      res.json({success: true, msg: 'Successfully Edited Task'});
+  }
+  })
+}else{
+  res.end(err);
+}
 }
