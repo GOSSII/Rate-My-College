@@ -4,7 +4,7 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { Contact } from 'src/app/models/contact';
-
+ 
 @Component({
   selector: 'app-contact-details',
   templateUrl: './contact-details.component.html',
