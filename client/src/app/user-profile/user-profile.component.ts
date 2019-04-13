@@ -21,13 +21,11 @@ export class UserProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
     this.title = this.activatedRoute.snapshot.data.title;
     this.User = new User();
     this.getUser(this.User);
     this.activatedRoute.params.subscribe(params => {
       let kk = params.id;
-      console.log('dsd', kk)
     });
   }
 
@@ -38,6 +36,20 @@ export class UserProfileComponent implements OnInit {
       // console.log('toekn', id)
     });
   }
+
+  onDetailsPageSubmit(): void {
+    console.log("data", this.User);
+    this.UserListService.editContact(this.User).subscribe(data => {
+      if (data.success) {
+        this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});
+        this.router.navigate(['/UserProfile']);
+      } else {
+        this.flashMessage.show('Edit Todo Failed', {cssClass: 'alert-danger', timeOut: 3000});
+        this.router.navigate(['/admin']);
+      }
+    });
+  }
+
 
 }
 

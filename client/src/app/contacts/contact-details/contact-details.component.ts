@@ -44,7 +44,7 @@ export class ContactDetailsComponent implements OnInit {
   onDetailsPageSubmit(): void {
     switch (this.title) {
       case 'Add Todo':
-      console.log("data", this.contact);
+      
       this.contactListService.addContact(this.contact).subscribe(data => {
         if (data.success) {
           this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});

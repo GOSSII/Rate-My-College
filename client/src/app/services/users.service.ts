@@ -27,7 +27,8 @@ export class UserListService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
     })
   };
 
@@ -44,7 +45,7 @@ export class UserListService {
 
   public getContact(contact: Contact): Observable<any> {
     this.loadToken();
-    return this.http.get<any>(this.endpoint + 'edit/' + contact._id, this.httpOptions);
+    return this.http.get<any>(this.endpoint + 'edit/' + this.user.id, this.httpOptions);
   }
 
   public addContact(contact: Contact): Observable<any> {
@@ -52,9 +53,9 @@ export class UserListService {
     return this.http.post<any>(this.endpoint + 'add', contact, this.httpOptions);
   }
 
-  public editContact(contact: Contact): Observable<any> {
+  public editContact(user: User): Observable<any> {
     this.loadToken();
-    return this.http.post<any>(this.endpoint + 'edit/' + contact._id, contact, this.httpOptions);
+    return this.http.put<any>(this.endpoint + 'edit/' + this.user.id,  user, this.httpOptions);
   }
 
   public deleteContact(contact: Contact): Observable<any> {
