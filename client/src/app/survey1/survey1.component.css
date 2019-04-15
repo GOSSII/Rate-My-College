@@ -1,0 +1,27 @@
+.container{
+    padding-top: 10px;
+}
+.surveyTitile{
+    font-size: 40px;
+    background-color:#fee151;
+    color: #343a40;
+}
+.surveyTitile, ::-webkit-input-placeholder { /* Edge */
+    color: #343a40;
+  }
+.question{
+    color: #343a40;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+}
+.input-group{
+    padding: 10px;
+}
+.question input{
+    width: 96.5%;
+}
+.questionrow{
+    padding-bottom: 10px;
+}
