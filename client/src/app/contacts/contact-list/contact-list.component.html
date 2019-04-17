@@ -8,18 +8,18 @@
           <table class="table table-bordered table-striped table-hover">
               <!-- Header Row-->
               <tr>
-                  <th class="text-center">Task</th>
-                  <th class="text-center">Description</th>
-                  <th class="text-center">Iscompleted</th>
+                  <th class="text-center">Title</th>
+                  <th class="text-center">Id</th>
+                  <th class="text-center">Status</th>
                   <th class="text-center"></th>
                   <th class="text-center"></th>
               </tr>
 
               <!-- Repeatable Template Row -->
                   <tr *ngFor="let contact of contacts">
-                      <td class="text-center">{{ contact.task }}</td>
-                      <td class="text-center">{{ contact.desc }}</td>
-                      <td class="text-center">{{ contact.completed }}</td>
+                      <td class="text-center">{{ contact.title }}</td>
+                      <td class="text-center">{{ contact._id }}</td>
+                      <td class="text-center">{{ contact.status }}</td>
 
                       <td class="text-center">
                       <a routerLink="/contact/contact-list/edit/{{ contact._id }}"

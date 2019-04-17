@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { Contact } from 'src/app/models/contact';
 
+
 @Component({
   selector: 'app-contact-delete',
   templateUrl: './contact-delete.component.html',

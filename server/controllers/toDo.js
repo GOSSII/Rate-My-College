@@ -6,7 +6,7 @@ let jwt = require('jsonwebtoken');
 let TODOModel = require('../models/toDo');
 
 module.exports.displayToDoList = (req, res, next) => {
-    let id = req.body.id;
+    let id = req.params.id;
     // console.log("id" , id)
         TODOModel.find({ user_id: id }, (err, SurveyList) => {
         if (err) {
@@ -58,7 +58,8 @@ console.log("sas", req.body.questions[0].question);
             o2: req.body.questions[2].o2,
             o3: req.body.questions[2].o3,
             o4: req.body.questions[2].o4,
-        }]
+        }],
+        status : req.body.status
     });
 
     TODOModel.create(newToDO, (err, contactModel) => {
