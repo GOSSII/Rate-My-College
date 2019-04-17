@@ -32,11 +32,29 @@ module.exports.displayAddPage = (req, res, next) => {
 
 
 module.exports.processAddPage = (req, res, next) => {
-
+console.log("sas", req.body.questions[0].question);
     let newToDO = TODOModel({
-        task: req.body.task,
-        desc: req.body.desc,
-        completed: req.body.completed
+        title : req.body.title,
+        questions: [{
+            question: req.body.questions[0].question,
+            o1: req.body.questions[0].o1,
+            o2: req.body.questions[0].o2,
+            o3: req.body.questions[0].o3,
+            o4: req.body.questions[0].o4,
+        },{
+            question: req.body.questions[1].question,
+            o1: req.body.questions[1].o1,
+            o2: req.body.questions[1].o2,
+            o3: req.body.questions[1].o3,
+            o4: req.body.questions[1].o4,
+        },
+        {
+            question: req.body.questions[2].question,
+            o1: req.body.questions[2].o1,
+            o2: req.body.questions[2].o2,
+            o3: req.body.questions[2].o3,
+            o4: req.body.questions[2].o4,
+        }]
     });
 
     TODOModel.create(newToDO, (err, contactModel) => {
