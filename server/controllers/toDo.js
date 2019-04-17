@@ -6,17 +6,20 @@ let jwt = require('jsonwebtoken');
 let TODOModel = require('../models/toDo');
 
 module.exports.displayToDoList = (req, res, next) => {
-    TODOModel.find((err, toDoList) => {
+    let id = req.body.id;
+    // console.log("id" , id)
+        TODOModel.find({ user_id: id }, (err, SurveyList) => {
         if (err) {
             return console.error(err);
         }
         else {
+            // console.log("SurveyList", SurveyList);
             // res.render('todo/index', {
             //     title: 'ToDo List',
             //     toDoList: toDoList,
             //     displayName: req.user ? req.user.displayName : ""
             // });
-            res.json({success: true, msg: 'ToDo List Displayed Successfully', toDoList: toDoList});
+            res.json({success: true, msg: 'ToDo List Displayed Successfully', SurveyList: SurveyList});
         }
     });
 };
@@ -34,6 +37,7 @@ module.exports.displayAddPage = (req, res, next) => {
 module.exports.processAddPage = (req, res, next) => {
 console.log("sas", req.body.questions[0].question);
     let newToDO = TODOModel({
+        user_id : req.body.user_id,
         title : req.body.title,
         questions: [{
             question: req.body.questions[0].question,
