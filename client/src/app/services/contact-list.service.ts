@@ -47,8 +47,9 @@ export class ContactListService {
   }
 
   public addContact(contact: Contact): Observable<any> {
+    this.user = JSON.parse(localStorage.getItem('user'));
     this.loadToken();
-    return this.http.post<any>(this.endpoint + 'add', contact, this.httpOptions);
+    return this.http.post<any>(this.endpoint + 'add/' + this.user.id , contact, this.httpOptions);
   }
 
   public editContact(contact: Contact): Observable<any> {

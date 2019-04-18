@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactListService } from 'src/app/services/contact-list.service';
+import { ContactListService } from '../../services/contact-list.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { Contact } from 'src/app/models/contact';
+import { Contact } from '../../models/contact';
  
 @Component({
   selector: 'app-contact-details',
@@ -26,7 +26,7 @@ export class ContactDetailsComponent implements OnInit {
     this.contact = new Contact();
 
     this.activatedRoute.params.subscribe(params => {
-      this.contact._id = params.id;
+     // this.contact._id = params.id;
     });
 
     if (this.title === 'Edit Todo') {
@@ -42,9 +42,26 @@ export class ContactDetailsComponent implements OnInit {
   }
 
   onDetailsPageSubmit(): void {
+
     switch (this.title) {
       case 'Add Todo':
-      
+      console.log("this.contact", this.contact)
+      let k = JSON.parse(localStorage.getItem('user'));
+      console.log("dsd",k.id);
+      // const contact = ({
+      //   user_id :k.id,
+      //   title : this.contact.title,
+      //   questions: [{
+      //       question: this.contact.Q1,
+      //       o1: this.contact.O1,
+      //       o2: this.contact.O2,
+      //       o3: this.contact.O3,
+      //       o4: this.contact.O4,
+      //   }],
+      //   status: 1
+      // });
+     
+      // console.log("this.contact AFTER ", contact);
       this.contactListService.addContact(this.contact).subscribe(data => {
         if (data.success) {
           this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});

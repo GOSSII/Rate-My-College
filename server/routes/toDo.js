@@ -20,7 +20,7 @@ router.get('/:id',  passport.authenticate('jwt', {session: false}),  toDoControl
 router.get('/add',  passport.authenticate('jwt', {session: false}),  toDoController.displayAddPage);
 
 /* POST Route for processing the Add page */
-router.post('/add',  passport.authenticate('jwt', {session: false}),  toDoController.processAddPage);
+router.post('/add/:id',  passport.authenticate('jwt', {session: false}),  toDoController.processAddPage);
 
 /* GET request - display the Edit page */
 router.get('/edit/:id',  passport.authenticate('jwt', {session: false}),  toDoController.displayEditPage);
