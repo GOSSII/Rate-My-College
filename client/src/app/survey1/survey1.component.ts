@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { survey } from 'src/app/models/survey';
+import { survey } from '../models/survey';
 @Component({
   selector: 'app-survey1',
   templateUrl: './survey1.component.html',

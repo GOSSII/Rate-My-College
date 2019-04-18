@@ -235,6 +235,19 @@
                         </div>
                            
                   <!-- Question 3 -->
+                  <div *ngIf="status" class="row">
+                     <div class="col-md-4">
+                        Status :
+                        <div class="onoffswitch">
+                           <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked  
+                           [(ngModel)]="contact.status" value="{{ contact.status }}">
+                           <label class="onoffswitch-label" for="myonoffswitch">
+                               <span class="onoffswitch-inner"></span>
+                               <span class="onoffswitch-switch"></span>
+                           </label>
+                       </div>
+                     </div>
+                  </div>
                      <button type="submit" class="btn btn-primary">
                  <i class="fas fa-edit"></i> {{ title }}</button>
                  <a routerLink="/contact/contact-list" class="btn btn-warning">

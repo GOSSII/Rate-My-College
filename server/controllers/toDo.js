@@ -10,7 +10,7 @@ module.exports.displayToDoList = (req, res, next) => {
     // console.log("id" , id)
         TODOModel.find({ user_id: id }, (err, SurveyList) => {
         if (err) {
-            return console.error(err);
+            res.send(err);
         }
         else {
             // console.log("SurveyList", SurveyList);
@@ -61,7 +61,7 @@ console.log("sas", req.body);
             o3: req.body.Q3O3,
             o4: req.body.Q3O4,
         }],
-        status : 1
+        status : 0
     });
 
     TODOModel.create(newToDO, (err, contactModel) => {
@@ -87,7 +87,7 @@ module.exports.displayEditPage = (req, res, next) => {
         }
         else
         {
-            console.log("dada - > ", ToDOObject.questions[0].o1);
+           // console.log("dada - > ", ToDOObject.status);
             const object = ({
                 _id: ToDOObject._id,
                 title: ToDOObject.title,
@@ -109,23 +109,44 @@ module.exports.displayEditPage = (req, res, next) => {
                 Q3O2: ToDOObject.questions[2].o2,
                 Q3O3: ToDOObject.questions[2].o3,
                 Q3O4: ToDOObject.questions[2].o4,
-
-
                 
+                status: ToDOObject.status
+
             });
             res.json({success: true, msg: 'Successfully Displayed Task to Edit', todo: object});
         }
     });
+
 }
 
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id;
 
+    console.log("edit update content ->", req.body);
     let updatedContact = TODOModel({
-        _id: id,
-        task: req.body.task,
-        desc: req.body.desc,
-        completed: req.body.completed
+        _id : id,
+        title : req.body.title,
+        questions: [{
+            question: req.body.Q1,
+            o1: req.body.Q1O1,
+            o2: req.body.Q1O2,
+            o3: req.body.Q1O3,
+            o4: req.body.Q1O4,
+        },{
+            question: req.body.Q2,
+            o1: req.body.Q2O1,
+            o2: req.body.Q2O2,
+            o3: req.body.Q2O3,
+            o4: req.body.Q2O4,
+        },
+        {
+            question: req.body.Q3,
+            o1: req.body.Q3O1,
+            o2: req.body.Q3O2,
+            o3: req.body.Q3O3,
+            o4: req.body.Q3O4,
+        }],
+        status : req.body.status
     });
 
     TODOModel.update({_id: id}, updatedContact, (err) => {

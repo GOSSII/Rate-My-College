@@ -13,6 +13,7 @@ import { Contact } from '../../models/contact';
 export class ContactDetailsComponent implements OnInit {
   title: string;
   contact: Contact;
+  status = false;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -29,7 +30,9 @@ export class ContactDetailsComponent implements OnInit {
      this.contact._id = params.id;
     });
 
+  
     if (this.title === 'Edit Todo') {
+      this.status = true;
       this.getContact(this.contact);
     }
   }
@@ -37,7 +40,7 @@ export class ContactDetailsComponent implements OnInit {
   private getContact(contact: Contact): void {
     this.contactListService.getContact(contact).subscribe(data => {
       this.contact = data.todo;
-      console.log("data recive -> ", this.contact);
+      // console.log("data recive -> ", this.contact);
     });
   }
 
@@ -60,7 +63,6 @@ export class ContactDetailsComponent implements OnInit {
       //   }],
       //   status: 1
       // });
-     
       // console.log("this.contact AFTER ", contact);
       this.contactListService.addContact(this.contact).subscribe(data => {
         if (data.success) {
@@ -74,6 +76,7 @@ export class ContactDetailsComponent implements OnInit {
       break;
 
       case 'Edit Todo':
+     // console.log("Edited doc -> ", this.contact);
       this.contactListService.editContact(this.contact).subscribe(data => {
         if (data.success) {
           this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});
