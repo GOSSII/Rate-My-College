@@ -2,28 +2,17 @@
 <div class="wrapper">
   <div class="jumbotron jumbotron-fluid">
       <div class="row">
-        <div class="col-md-4 col-xs-12">
+     
+
+
+
+        <div class="col-md-4 col-xs-12" *ngFor="let contact of contacts">
             <div class="card ">
                 <div class="card-header">
                   Featured
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Centennial College</h5>
-                  <p class="card-text">SETAS - Information and Communication Engineering Technology- ICET</p>
-                  <a href="#" class="btn btn-primary">Take The Survey</a>
-                </div>
-                <div class="card-footer text-muted">
-                  2 days ago
-                </div>
-              </div>
-        </div>
-        <div class="col-md-4 col-xs-12">
-            <div class="card ">
-                <div class="card-header">
-                  Featured
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Centennial College</h5>
+                    <h5 class="card-title">{{ contact.title }}</h5>
                     <p class="card-text">SETAS - Information and Communication Engineering Technology- ICET</p>
                     <a href="#" class="btn btn-primary">Take The Survey</a>
                   </div>
@@ -32,21 +21,9 @@
                 </div>
               </div>
         </div>
-        <div class="col-md-4 col-xs-12">
-            <div class="card ">
-                <div class="card-header">
-                  Featured
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Centennial College</h5>
-                    <p class="card-text">SETAS - Information and Communication Engineering Technology- ICET</p>
-                    <a href="#" class="btn btn-primary">Take The Survey</a>
-                  </div>
-                <div class="card-footer text-muted">
-                  2 days ago
-                </div>
-              </div>
-        </div>
+        
+
+
       </div>
       
   </div>
@@ -54,3 +31,44 @@
 <!-- Content End -->
 
 
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1>TODO List</h1>
+            <a class="btn btn-primary" routerLink="/contact/contact-list/add" role="button">
+            <i class="fas fa-plus-circle"></i> Add a Task</a>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">Title</th>
+                    <th class="text-center">Id</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>
+                </tr>
+  
+                <!-- Repeatable Template Row -->
+                    <tr *ngFor="let contact of contacts">
+                        <td class="text-center">{{ contact.title }}</td>
+                        <td class="text-center">{{ contact._id }}</td>
+                        <td class="text-center">{{ contact.status }}</td>
+  
+                        <td class="text-center">
+                        <a routerLink="/contact/contact-list/edit/{{ contact._id }}"
+                            class="btn btn-primary"><i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+  
+                        <td class="text-center">
+                                <a routerLink="/contact/contact-list/delete/{{ contact._id }}" (click)="onDeleteClick()"
+                                    class="btn btn-danger"><i class="fas fa-trash-alt"></i> Delete</a>
+                                </td>
+                    </tr>
+            </table>
+  
+        </div>
+    </div>
+  </div>
+  
