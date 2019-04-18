@@ -15,16 +15,25 @@ module.exports.getActiveSurvey = (req, res, next) => {
             res.send(err);
         }
         else {
-            // console.log("SurveyList", SurveyList);
-            // res.render('todo/index', {
-            //     title: 'ToDo List',
-            //     toDoList: toDoList,
-            //     displayName: req.user ? req.user.displayName : ""
-            // });
             res.json({success: true, msg: 'ToDo List Displayed Successfully', SurveyList: SurveyList});
         }
     });
 }
+
+
+module.exports.getActiveSurveyById = (req, res, next) => {
+    let id = req.params.id;
+    // console.log("id" , id)
+        TODOModel.find({ _id: id }, (err, SurveyList) => {
+        if (err) {
+            res.send(err);
+        }
+        else {
+            res.json({success: true, msg: 'ToDo List Displayed Successfully', SurveyList: SurveyList});
+        }
+    });
+};
+
 
 module.exports.postSurveyResponse = (req, res, next) => {
   // res.json("Data Addes ");
