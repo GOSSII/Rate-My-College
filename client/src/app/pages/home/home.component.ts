@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { BasePageComponent } from 'src/app/partials/base-page/base-page.component';
+import { BasePageComponent } from '../../partials/base-page/base-page.component';
 import { ActivatedRoute } from '@angular/router';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

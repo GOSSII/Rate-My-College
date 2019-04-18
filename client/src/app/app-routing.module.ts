@@ -26,10 +26,16 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { Survey1Component } from './survey1/survey1.component';
 import { TestComponent } from './test/test.component';
+import { TakeSurveyComponent } from './take-survey/take-survey.component';
 
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, data: {title: 'Home'}},
+  {path: 'takesurvey', component: TakeSurveyComponent, data: {title: 'Take Survey'}},
+  {path: 'takesurvey/:id', component: TakeSurveyComponent, data: {title: 'Take Survey'}},
+
+
+
   {path: 'admin', component: AdminDashboardComponent, data: {title: 'admin'} ,canActivate: [AuthGuard]},
   {path: 'UserProfile', component: UserProfileComponent, data: {title: 'UserProfile'} ,canActivate: [AuthGuard]},
   {path: 'Survey1', component: Survey1Component, data: {title: 'Survey1'} ,canActivate: [AuthGuard]},

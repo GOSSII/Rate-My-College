@@ -23,13 +23,42 @@ module.exports.getActiveSurvey = (req, res, next) => {
 
 module.exports.getActiveSurveyById = (req, res, next) => {
     let id = req.params.id;
-    // console.log("id" , id)
-        TODOModel.find({ _id: id }, (err, SurveyList) => {
-        if (err) {
-            res.send(err);
+
+    TODOModel.findById(id, (err, ToDOObject) => {
+        if(err) {
+            console.log(err);
+            res.end(err);
         }
-        else {
-            res.json({success: true, msg: 'ToDo List Displayed Successfully', SurveyList: SurveyList});
+        else
+        {
+           // console.log("dada - > ", ToDOObject.status);
+            const object = ({
+                _id: ToDOObject._id,
+                title: ToDOObject.title,
+                desc : ToDOObject.desc,
+
+                Q1 : ToDOObject.questions[0].question,
+                Q1O1: ToDOObject.questions[0].o1,
+                Q1O2: ToDOObject.questions[0].o2,
+                Q1O3: ToDOObject.questions[0].o3,
+                Q1O4: ToDOObject.questions[0].o4,
+
+                Q2 : ToDOObject.questions[1].question,
+                Q2O1: ToDOObject.questions[1].o1,
+                Q2O2: ToDOObject.questions[1].o2,
+                Q2O3: ToDOObject.questions[1].o3,
+                Q2O4: ToDOObject.questions[1].o4,
+
+                Q3 : ToDOObject.questions[2].question,
+                Q3O1: ToDOObject.questions[2].o1,
+                Q3O2: ToDOObject.questions[2].o2,
+                Q3O3: ToDOObject.questions[2].o3,
+                Q3O4: ToDOObject.questions[2].o4,
+                
+                status: ToDOObject.status
+
+            });
+            res.json({success: true, msg: 'Successfully Displayed Task to Edit', todo: object});
         }
     });
 };

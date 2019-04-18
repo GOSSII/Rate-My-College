@@ -39,6 +39,9 @@ export class SurveyService {
   public getActiveSurvey(): Observable<any> {
     return this.http.get<any>(this.endpoint, this.httpOptions);
   }
+  public getContact(contact: Contact): Observable<any> {
+    return this.http.get<any>(this.endpoint +  contact._id, this.httpOptions);
+  }
 
  
   // public addContact(contact: Contact): Observable<any> {

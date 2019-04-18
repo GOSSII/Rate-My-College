@@ -43,6 +43,7 @@ import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.compo
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { Survey1Component } from './survey1/survey1.component';
 import { TestComponent } from './test/test.component';
+import { TakeSurveyComponent } from './take-survey/take-survey.component';
 
 export function jwtTokenGetter() {
   return localStorage.getItem('id_token');
@@ -70,6 +71,7 @@ export function jwtTokenGetter() {
     Survey1Component, SurveyComponent,
     SurveyCreatorComponent,
     TestComponent,
+    TakeSurveyComponent,
   ],
   imports: [
     BrowserModule,
