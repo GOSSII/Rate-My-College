@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactListService } from 'src/app/services/contact-list.service';
+// import { ContactListService } from 'src/app/services/contact-list.service';
+import { ContactListService } from '../../services/contact-list.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router } from '@angular/router';
 
-import { Contact } from 'src/app/models/contact';
-
+// import { Contact } from 'src/app/models/contact';
+import { Contact } from '../../models/contact';
 @Component({
   selector: 'app-contact-list',
   templateUrl: './contact-list.component.html',
@@ -35,7 +36,6 @@ export class ContactListComponent implements OnInit {
     this.contactListService.getList().subscribe(data => {
       if(data.success) {
         this.contacts = data.SurveyList;
-        console.log("adsds -> " , this.contacts);
       } else {
         this.flashMessage.show('User must be logged-in', {cssClass: 'alert-danger', timeOut: 3000});
       }

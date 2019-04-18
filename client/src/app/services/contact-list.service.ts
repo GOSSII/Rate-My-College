@@ -37,7 +37,6 @@ export class ContactListService {
 
   public getList(): Observable<any> {
     this.user = JSON.parse(localStorage.getItem('user'));
-    console.log('toekn', this.user.id)
     this.loadToken();
     return this.http.get<any>(this.endpoint + this.user.id, this.httpOptions);
   }
