@@ -27,5 +27,6 @@ export class Contact {
         o4: String,
     }]
     status: Boolean
+  _id: any;
 }
  

@@ -87,13 +87,33 @@ module.exports.displayEditPage = (req, res, next) => {
         }
         else
         {
-            // show the edit view
-            // res.render('todo/edit', {
-            //     title: 'Edit Contact',
-            //     todo: ToDOObject,
-            //     displayName: req.user ? req.user.displayName : ""
-            // });
-            res.json({success: true, msg: 'Successfully Displayed Task to Edit', todo: ToDOObject});
+            console.log("dada - > ", ToDOObject.questions[0].o1);
+            const object = ({
+                _id: ToDOObject._id,
+                title: ToDOObject.title,
+
+                Q1 : ToDOObject.questions[0].question,
+                Q1O1: ToDOObject.questions[0].o1,
+                Q1O2: ToDOObject.questions[0].o2,
+                Q1O3: ToDOObject.questions[0].o3,
+                Q1O4: ToDOObject.questions[0].o4,
+
+                Q2 : ToDOObject.questions[1].question,
+                Q2O1: ToDOObject.questions[1].o1,
+                Q2O2: ToDOObject.questions[1].o2,
+                Q2O3: ToDOObject.questions[1].o3,
+                Q2O4: ToDOObject.questions[1].o4,
+
+                Q3 : ToDOObject.questions[2].question,
+                Q3O1: ToDOObject.questions[2].o1,
+                Q3O2: ToDOObject.questions[2].o2,
+                Q3O3: ToDOObject.questions[2].o3,
+                Q3O4: ToDOObject.questions[2].o4,
+
+
+                
+            });
+            res.json({success: true, msg: 'Successfully Displayed Task to Edit', todo: object});
         }
     });
 }

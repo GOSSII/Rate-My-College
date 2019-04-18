@@ -26,7 +26,7 @@ export class ContactDetailsComponent implements OnInit {
     this.contact = new Contact();
 
     this.activatedRoute.params.subscribe(params => {
-     // this.contact._id = params.id;
+     this.contact._id = params.id;
     });
 
     if (this.title === 'Edit Todo') {
