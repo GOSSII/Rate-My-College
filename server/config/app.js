@@ -41,6 +41,7 @@ let usersRouter = require('../routes/users');
 let projectsRouter = require("../routes/projects");
 let contactRouter = require('../routes/contact');
 let toDoRouter = require("../routes/toDo");
+let takenSurveyRouter = require("../routes/TakenSurvey");
 
 
 let app = express();
@@ -106,6 +107,7 @@ app.use('/api/users', passport.authenticate('jwt', {session: false}), usersRoute
 app.use("/api/projects",projectsRouter);
 app.use('/api/contact',contactRouter);
 app.use("/api/todo", passport.authenticate('jwt', {session: false}), toDoRouter);
+app.use("/api/takesurvey",takenSurveyRouter);
 
 app.get('*', (req, res) => {
   res.sendfile(path.join(__dirname, '../../public/index.html'));
