@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { UserListService } from 'src/app/services/users.service';
+import { UserListService } from '../../app/services/users.service';
 import { FlashMessagesService } from 'angular2-flash-messages';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { User } from 'src/app/models/user';
+import { User } from '../../app/models/user';
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
