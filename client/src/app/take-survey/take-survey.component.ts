@@ -38,5 +38,7 @@ export class TakeSurveyComponent implements OnInit {
       this.contact = data.todo;
     });
   }
-
+  onDetailsPageSubmit(): void {
+    console.log("back -> ", this.contact);
+  }
 }

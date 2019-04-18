@@ -4,26 +4,21 @@
        <div class="col-md-offset-3 col-md-6">
           <h1>{{ title }}</h1>
           <form class="form" (submit)="onDetailsPageSubmit()">
-             <div class="form-group">
-                <label for="LastNameTextField">Survey Title</label>
-                <input type="text" class="form-control" id="LastNameTextField" placeholder="Enter Description"
-                name="lastName" [(ngModel)]="contact.title" value="{{ contact.title }}" required>
-             </div>
-             <div class="form-group">
-                 <label for="LastNameTextField">Survey Description</label>
-                 <input type="text" class="form-control" id="LastNameTextField" placeholder="Enter Description"
-                 name="lastName" [(ngModel)]="contact.desc" value="{{ contact.desc }}" required>
-              </div>
+
+
+            <h1>{{contact.title}}</h1>
+                  <h3>{{ contact.desc }}</h3>
+             
               <!-- Question 1 -->
              <div class="row questionrow">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                    <div class="card">
                       <div class="card-body">
                          <div class="question">
-                            <h4> 1)
+                            <h4> <label>1) {{ contact.Q1 }}</label>
                                <input type="text" name="question" id="Q1TextField"
                                placeholder="Enter Question Here " name="Q1TextField"
-                               [(ngModel)]="contact.Q1" value="{{ contact.Q1 }}">
+                               [(ngModel)]="contact.Q1" value="{{ contact.Q1 }}" hidden>
                             </h4>
                          </div>
                         
@@ -95,10 +90,10 @@
            <div class="card">
               <div class="card-body">
                  <div class="question">
-                    <h4> 2)
+                     <h4> <label>1) {{ contact.Q2 }}</label>
                        <input type="text" name="question" id="Q2TextField"
                        placeholder="Enter Question Here " name="Q2TextField"
-                       [(ngModel)]="contact.Q2" value="{{ contact.Q2 }}">
+                       [(ngModel)]="contact.Q2" value="{{ contact.Q2 }}" hidden>
                     </h4>
                  </div>
                 
@@ -171,10 +166,10 @@
                           <div class="card">
                              <div class="card-body">
                                 <div class="question">
-                                   <h4> 3)
+                                    <h4> <label>1) {{ contact.Q3 }}</label>
                                       <input type="text" name="question" id="Q3TextField"
                                       placeholder="Enter Question Here " name="Q3TextField"
-                                      [(ngModel)]="contact.Q3" value="{{ contact.Q3 }}">
+                                      [(ngModel)]="contact.Q3" value="{{ contact.Q3 }}" hidden>
                                    </h4>
                                 </div>
                                
