@@ -5,6 +5,7 @@ let toDoSchema = mongoose.Schema(
     {
     user_id :String,    
     title : String,
+    desc : String,
     questions: [{
         question: String,
         o1: String,

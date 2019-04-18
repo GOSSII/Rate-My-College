@@ -41,6 +41,7 @@ console.log("sas", req.body);
     let newToDO = TODOModel({
         user_id : id,
         title : req.body.title,
+        desc : req.body.desc,
         questions: [{
             question: req.body.Q1,
             o1: req.body.Q1O1,
@@ -91,6 +92,7 @@ module.exports.displayEditPage = (req, res, next) => {
             const object = ({
                 _id: ToDOObject._id,
                 title: ToDOObject.title,
+                desc : ToDOObject.desc,
 
                 Q1 : ToDOObject.questions[0].question,
                 Q1O1: ToDOObject.questions[0].o1,
@@ -126,6 +128,7 @@ module.exports.processEditPage = (req, res, next) => {
     let updatedContact = TODOModel({
         _id : id,
         title : req.body.title,
+        desc : req.body.desc,
         questions: [{
             question: req.body.Q1,
             o1: req.body.Q1O1,
