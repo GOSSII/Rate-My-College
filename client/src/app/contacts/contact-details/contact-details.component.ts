@@ -36,8 +36,8 @@ export class ContactDetailsComponent implements OnInit {
 
   private getContact(contact: Contact): void {
     this.contactListService.getContact(contact).subscribe(data => {
-      console.log(data);
       this.contact = data.todo;
+      console.log("data recive -> ", this.contact);
     });
   }
 
@@ -45,9 +45,9 @@ export class ContactDetailsComponent implements OnInit {
 
     switch (this.title) {
       case 'Add Todo':
-      console.log("this.contact", this.contact)
+      // console.log("this.contact", this.contact)
       let k = JSON.parse(localStorage.getItem('user'));
-      console.log("dsd",k.id);
+      // console.log("dsd",k.id);
       // const contact = ({
       //   user_id :k.id,
       //   title : this.contact.title,
