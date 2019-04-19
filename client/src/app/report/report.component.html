@@ -1,9 +1,119 @@
-<div class="container">
-    <h2>Animated Progress Bar</h2>
-    <p>The .active class animates the progress bar:</p> 
-    <div class="progress">
-      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
-        40%
+
+<div *ngIf="status">
+    dsdsdcs
+  </div>
+  <div class="container">
+    <h2>Report of {{ contact. title }}</h2>
+    <div class="user">{{ contact.users}} User Participate</div>
+    <p>{{ contact.desc}}</p>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="question">
+          <h4> Q.1 ) {{ contact.Question_1}} </h4>
+        </div>
+        <div class="option">{{ contact.Q1_Ops_1 }}</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+            aria-valuemax="100" [ngStyle]="{'width': (contact.Q1A1) + '%'}" >
+            {{ contact.Q1A1 }}%
+            </div>
+        </div>
+        <div class="option">{{ contact.Q1_Ops_2 }}</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+               aria-valuemax="100" [ngStyle]="{'width': (contact.Q1A2) + '%'}" >
+                 {{ contact.Q1A2 }}%
+               </div>
+        </div>
+        <div class="option">{{ contact.Q1_Ops_3 }}</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+                 aria-valuemax="100" [ngStyle]="{'width': (contact.Q1A3) + '%'}" >
+                   {{ contact.Q1A3 }}%
+                 </div>
+        </div>
+        <div class="option">{{ contact.Q1_Ops_4 }}</div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+                   aria-valuemax="100" [ngStyle]="{'width': (contact.Q1A4) + '%'}" >
+                     {{ contact.Q1A4 }}%
+                   </div>
+        </div>
       </div>
     </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+          <div class="question">
+            <h4> Q.2 ) {{ contact.Question_2}} </h4>
+          </div>
+          <div class="option">{{ contact.Q2_Ops_1 }}</div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+              aria-valuemax="100" [ngStyle]="{'width': (contact.Q2A1) + '%'}" >
+              {{ contact.Q2A1 }}%
+              </div>
+          </div>
+          <div class="option">{{ contact.Q2_Ops_2 }}</div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+                 aria-valuemax="100" [ngStyle]="{'width': (contact.Q2A2) + '%'}" >
+                   {{ contact.Q2A2 }}%
+                 </div>
+          </div>
+          <div class="option">{{ contact.Q2_Ops_3 }}</div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+                   aria-valuemax="100" [ngStyle]="{'width': (contact.Q2A3) + '%'}" >
+                     {{ contact.Q2A3 }}%
+                   </div>
+          </div>
+          <div class="option">{{ contact.Q2_Ops_4 }}</div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+                     aria-valuemax="100" [ngStyle]="{'width': (contact.Q2A4) + '%'}" >
+                       {{ contact.Q2A4 }}%
+                     </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+          <div class="col-md-12">
+            <div class="question">
+              <h4> Q.3 ) {{ contact.Question_3}} </h4>
+            </div>
+            <div class="option">{{ contact.Q3_Ops_1 }}</div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+                aria-valuemax="100" [ngStyle]="{'width': (contact.Q3A1) + '%'}" >
+                {{ contact.Q3A1 }}%
+                </div>
+            </div>
+            <div class="option">{{ contact.Q3_Ops_2 }}</div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+                   aria-valuemax="100" [ngStyle]="{'width': (contact.Q3A2) + '%'}" >
+                     {{ contact.Q3A2 }}%
+                   </div>
+            </div>
+            <div class="option">{{ contact.Q3_Ops_3 }}</div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+                     aria-valuemax="100" [ngStyle]="{'width': (contact.Q3A3) + '%'}" >
+                       {{ contact.Q3A3 }}%
+                     </div>
+            </div>
+            <div class="option">{{ contact.Q3_Ops_4 }}</div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" 
+                       aria-valuemax="100" [ngStyle]="{'width': (contact.Q3A4) + '%'}" >
+                         {{ contact.Q3A4 }}%
+                       </div>
+            </div>
+          </div>
+        </div>
   </div>
+  
+  

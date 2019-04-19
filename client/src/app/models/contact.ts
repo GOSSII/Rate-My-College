@@ -33,6 +33,7 @@ export class Contact {
   Q1O2: String;
   Q1O3: String;
   Q1O4: String;
+  users: number;
 
 }
  

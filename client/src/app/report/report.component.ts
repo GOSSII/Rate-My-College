@@ -28,14 +28,35 @@ export class ReportComponent implements OnInit {
      });
 
       this.getReport(this.contact._id);
+
+
+     
   }
 
   private getReport(contact: Contact): void {
+    let status = false;
     console.log('sdds id ',contact);
     this.SurveyService.getReports(contact).subscribe(data => {
       this.contact = data.todo;
-      console.log('sdds pass',this.contact);
+      console.log(this.contact);
+      let jj =70;
+      if(this.contact.users === 0){
+        status = true;
+      }
+      //this.GenerateProgressBar(this.contact);
     });
   }
 
+  // private GenerateProgressBar(contact: Contact): void{
+  //   var current_progress = 0;
+  //   var interval = setInterval(function() {
+  //       current_progress += 20;
+  //       $("#dynamic")
+  //       .css("width", current_progress + "%")
+  //       .attr("aria-valuenow", current_progress)
+  //       .text(current_progress + "% Complete");
+  //       if (current_progress >= contact.Q1A2)
+  //           clearInterval(interval);
+  //   }, 1000);
+  // }
 }

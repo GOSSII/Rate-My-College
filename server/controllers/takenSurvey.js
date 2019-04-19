@@ -223,19 +223,33 @@ module.exports.getReportById = (req, res, next) => {
                             let Q3A4 = Q3_Res_4 / users * 100;
 
                             let result = {
+                                title,
+                                desc,
                                 Question_1,
+                                Q1_Ops_1,
+                                Q1_Ops_2,
+                                Q1_Ops_3,
+                                Q1_Ops_4,
                                 Q1A1,
                                 Q1A2,
                                 Q1A3,
                                 Q1A4,
 
                                 Question_2,
+                                Q2_Ops_1,
+                                Q2_Ops_2,
+                                Q2_Ops_3,
+                                Q2_Ops_4,
                                 Q2A1,
                                 Q2A2,
                                 Q2A3,
                                 Q2A4,
 
                                 Question_3,
+                                Q3_Ops_1,
+                                Q3_Ops_2,
+                                Q3_Ops_3,
+                                Q3_Ops_4,
                                 Q3A1,
                                 Q3A2,
                                 Q3A3,
