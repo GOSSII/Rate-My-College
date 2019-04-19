@@ -11,6 +11,8 @@ router
     surveyController.getActiveSurveyById(req, res);
   }).post('/add/:id', (req, res) => {
     surveyController.postSurveyResponse(req, res);
+  }).get('/report/:id', passport.authenticate('jwt', {session: false}), (req, res) => {
+    surveyController.getReportById(req, res);
   });
 
 

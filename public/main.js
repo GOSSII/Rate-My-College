@@ -2104,7 +2104,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>\n    {{ title }}\n  </h1>\n  \n  <h1>Survey</h1>\n  <survey [json]=\"json\" (submitSurvey)=\"sendData($event)\"></survey>\n  \n  <h1>Survey JS Creator</h1>\n  <survey-creator\n    [json]=\"json\"\n    (surveySaved)=\"onSurveySaved($event)\"\n  ></survey-creator>\n  "
+module.exports = "<h1>\n    {{ title }}\n  </h1>\n<!--   \n  <h1>Survey</h1>\n  <survey [json]=\"json\" (submitSurvey)=\"sendData($event)\"></survey>\n  \n  <h1>Survey JS Creator</h1>\n  <survey-creator\n    [json]=\"json\"\n    (surveySaved)=\"onSurveySaved($event)\"\n  ></survey-creator>\n   -->"
 
 /***/ }),
 
