@@ -75,14 +75,14 @@ module.exports.postSurveyResponse = (req, res, next) => {
             desc : req.body.desc,
             questions: [{
                 question: req.body.Q1,
-                o1: req.body.Q1O1,
+                o1: req.body.A1,
             },{
                 question: req.body.Q2,
-                o1: req.body.Q2O1,
+                o1: req.body.B1,
             },
             {
                 question: req.body.Q3,
-                o1: req.body.Q3O1,
+                o1: req.body.C1,
             }]
         });
     

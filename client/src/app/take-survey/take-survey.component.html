@@ -8,7 +8,11 @@
 
             <h1>{{contact.title}}</h1>
                   <h3>{{ contact.desc }}</h3>
-             
+                 
+
+                
+
+
               <!-- Question 1 -->
              <div class="row questionrow">
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -23,58 +27,34 @@
                          </div>
                         
                          <div class="row">
-                            <div class="col-md-6">
-                               <div class="input-group">
-                                  <div class="input-group-prepend">
-                                     <div class="input-group-text">
-                                        <input type="radio"
-                                           aria-label="Radio button for following text input">
-                                     </div>
-                                  </div>
-                                  <input type="text" class="form-control"
-                                  aria-label="Text input with radio button" id="Q1O1TextField"
-                                  placeholder="Enter Question Here " name="Q1O1TextField"
-                                  [(ngModel)]="contact.Q1O1" value="{{ contact.Q1O1 }}">
+                            <div class="col-md-12">
+                                          <div class="form-check-inline">
+                                                <label class="form-check-label" for="radio1">
+                                                <input type="radio" class="form-check-input" id="radio1" name="optradio"
+                                                 [(ngModel)]="contact.A1" value="{{ contact.Q1O1 }}" >{{ contact.Q1O1 }}
+                                                </label>
+                                             </div>
+                                             <div class="form-check-inline">
+                                                   <label class="form-check-label" for="radio2">
+                                                   <input type="radio" class="form-check-input" id="radio2" name="optradio"
+                                                    [(ngModel)]="contact.A1" value="{{ contact.Q1O2 }}" >{{ contact.Q1O2 }}
+                                                   </label>
+                                                </div>
+                                                <div class="form-check-inline">
+                                                      <label class="form-check-label" for="radio3">
+                                                      <input type="radio" class="form-check-input" id="radio3" name="optradio"
+                                                       [(ngModel)]="contact.A1" value="{{ contact.Q1O3 }}" >{{ contact.Q1O3 }}
+                                                      </label>
+                                                   </div>
+                                                   <div class="form-check-inline">
+                                                         <label class="form-check-label" for="radio4">
+                                                         <input type="radio" class="form-check-input" id="radio4" name="optradio"
+                                                          [(ngModel)]="contact.A1" value="{{ contact.Q1O4 }}" >{{ contact.Q1O4 }}
+                                                         </label>
+                                                      </div>
                                </div>
-                               <div class="input-group">
-                                  <div class="input-group-prepend">
-                                     <div class="input-group-text">
-                                        <input type="radio"
-                                           aria-label="Radio button for following text input">
-                                     </div>
-                                  </div>
-                                  <input type="text" class="form-control"
-                                  aria-label="Text input with radio button" id="Q1O2TextField"
-                                  placeholder="Enter Question Here " name="Q1O2TextField"
-                                  [(ngModel)]="contact.Q1O2" value="{{ contact.Q1O2 }}">
-                               </div>
-                            </div>
-                            <div class="col-md-6">
-                               <div class="input-group">
-                                  <div class="input-group-prepend">
-                                     <div class="input-group-text">
-                                        <input type="radio"
-                                           aria-label="Radio button for following text input">
-                                     </div>
-                                  </div>
-                                  <input type="text" class="form-control"
-                                  aria-label="Text input with radio button" id="Q1O3TextField"
-                                  placeholder="Enter Question Here " name="Q1O3TextField"
-                                  [(ngModel)]="contact.Q1O3" value="{{ contact.Q1O3 }}">
-                               </div>
-                               <div class="input-group">
-                                  <div class="input-group-prepend">
-                                     <div class="input-group-text">
-                                        <input type="radio"
-                                           aria-label="Radio button for following text input">
-                                     </div>
-                                  </div>
-                                  <input type="text" class="form-control"
-                                  aria-label="Text input with radio button" id="Q1O4TextField"
-                                  placeholder="Enter Question Here " name="Q1O4TextField"
-                                  [(ngModel)]="contact.Q1O4" value="{{ contact.Q1O4 }}">
-                               </div>
-                            </div>
+                          
+                         
                          </div>
                      
                          
@@ -84,173 +64,111 @@
              </div>
                  <!-- Question 1 -->
                  <!-- Question 2 -->
-   
-    <div class="row questionrow">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-           <div class="card">
-              <div class="card-body">
-                 <div class="question">
-                     <h4> <label>1) {{ contact.Q2 }}</label>
-                       <input type="text" name="question" id="Q2TextField"
-                       placeholder="Enter Question Here " name="Q2TextField"
-                       [(ngModel)]="contact.Q2" value="{{ contact.Q2 }}" hidden>
-                    </h4>
-                 </div>
-                
-                 <div class="row">
-                    <div class="col-md-6">
-                       <div class="input-group">
-                          <div class="input-group-prepend">
-                             <div class="input-group-text">
-                                <input type="radio"
-                                   aria-label="Radio button for following text input">
-                             </div>
-                          </div>
-                          <input type="text" class="form-control"
-                          aria-label="Text input with radio button" id="Q2O1TextField"
-                          placeholder="Enter Question Here " name="Q2O1TextField"
-                          [(ngModel)]="contact.Q2O1" value="{{ contact.Q2O1 }}">
-                       </div>
-                       <div class="input-group">
-                          <div class="input-group-prepend">
-                             <div class="input-group-text">
-                                <input type="radio"
-                                   aria-label="Radio button for following text input">
-                             </div>
-                          </div>
-                          <input type="text" class="form-control"
-                          aria-label="Text input with radio button" id="Q2OTextField"
-                          placeholder="Enter Question Here " name="Q2O2TextField"
-                          [(ngModel)]="contact.Q2O2" value="{{ contact.Q2O2 }}">
-                       </div>
-                    </div>
-                    <div class="col-md-6">
-                       <div class="input-group">
-                          <div class="input-group-prepend">
-                             <div class="input-group-text">
-                                <input type="radio"
-                                   aria-label="Radio button for following text input">
-                             </div>
-                          </div>
-                          <input type="text" class="form-control"
-                          aria-label="Text input with radio button" id="Q2O3TextField"
-                          placeholder="Enter Question Here " name="Q2O3TextField"
-                          [(ngModel)]="contact.Q2O3" value="{{ contact.Q2O3 }}">
-                       </div>
-                       <div class="input-group">
-                          <div class="input-group-prepend">
-                             <div class="input-group-text">
-                                <input type="radio"
-                                   aria-label="Radio button for following text input">
-                             </div>
-                          </div>
-                          <input type="text" class="form-control"
-                          aria-label="Text input with radio button" id="Q2O4TextField"
-                          placeholder="Enter Question Here " name="Q2O4TextField"
-                          [(ngModel)]="contact.Q2O4" value="{{ contact.Q2O4 }}">
-                       </div>
-                    </div>
-                 </div>
-             
-                 
-              </div>
-           </div>
-        </div>
-     </div>
-        
+                 <div class="row questionrow">
+                     <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="question">
+                                 <h4> <label>2) {{ contact.Q2 }}</label>
+                                    <input type="text" name="question" id="Q1TextField"
+                                    placeholder="Enter Question Here " name="Q1TextField"
+                                    [(ngModel)]="contact.Q2" value="{{ contact.Q2 }}" hidden>
+                                 </h4>
+                              </div>
+                             
+                              <div class="row">
+                                 <div class="col-md-12">
+                                               <div class="form-check-inline">
+                                                     <label class="form-check-label" for="radio5">
+                                                     <input type="radio" class="form-check-input" id="radio5" name="optradio2"
+                                                      [(ngModel)]="contact.B1" value="{{ contact.Q2O1 }}" >{{ contact.Q2O1 }}
+                                                     </label>
+                                                  </div>
+                                                  <div class="form-check-inline">
+                                                        <label class="form-check-label" for="radio6">
+                                                        <input type="radio" class="form-check-input" id="radio6" name="optradio2"
+                                                         [(ngModel)]="contact.B1" value="{{ contact.Q2O2 }}" >{{ contact.Q2O2 }}
+                                                        </label>
+                                                     </div>
+                                                     <div class="form-check-inline">
+                                                           <label class="form-check-label" for="radio7">
+                                                           <input type="radio" class="form-check-input" id="radio7" name="optradio2"
+                                                            [(ngModel)]="contact.B1" value="{{ contact.Q2O3 }}" >{{ contact.Q2O3 }}
+                                                           </label>
+                                                        </div>
+                                                        <div class="form-check-inline">
+                                                              <label class="form-check-label" for="radio8">
+                                                              <input type="radio" class="form-check-input" id="radio8" name="optradio2"
+                                                               [(ngModel)]="contact.B1" value="{{ contact.Q2O4 }}" >{{ contact.Q2O4 }}
+                                                              </label>
+                                                           </div>
+                                    </div>
+                               
+                              
+                              </div>
+                          
+                              
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+  
                  <!-- Question 2 -->
 
                  <!-- Question 3 -->
                  <div class="row questionrow">
-                       <div class="col-md-12 col-sm-12 col-xs-12">
-                          <div class="card">
-                             <div class="card-body">
-                                <div class="question">
-                                    <h4> <label>1) {{ contact.Q3 }}</label>
-                                      <input type="text" name="question" id="Q3TextField"
-                                      placeholder="Enter Question Here " name="Q3TextField"
-                                      [(ngModel)]="contact.Q3" value="{{ contact.Q3 }}" hidden>
-                                   </h4>
-                                </div>
+                     <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="question">
+                                 <h4> <label>3) {{ contact.Q3 }}</label>
+                                    <input type="text" name="question" id="Q1TextField"
+                                    placeholder="Enter Question Here " name="Q1TextField"
+                                    [(ngModel)]="contact.Q3" value="{{ contact.Q3 }}" hidden>
+                                 </h4>
+                              </div>
+                             
+                              <div class="row">
+                                 <div class="col-md-12">
+                                               <div class="form-check-inline">
+                                                     <label class="form-check-label" for="radio9">
+                                                     <input type="radio" class="form-check-input" id="radio9" name="optradio3"
+                                                      [(ngModel)]="contact.C1" value="{{ contact.Q3O1 }}" >{{ contact.Q3O1 }}
+                                                     </label>
+                                                  </div>
+                                                  <div class="form-check-inline">
+                                                        <label class="form-check-label" for="radio10">
+                                                        <input type="radio" class="form-check-input" id="radio10" name="optradio3"
+                                                         [(ngModel)]="contact.C1" value="{{ contact.Q3O2 }}" >{{ contact.Q3O2 }}
+                                                        </label>
+                                                     </div>
+                                                     <div class="form-check-inline">
+                                                           <label class="form-check-label" for="radio11">
+                                                           <input type="radio" class="form-check-input" id="radio11" name="optradio3"
+                                                            [(ngModel)]="contact.C1" value="{{ contact.Q3O3 }}" >{{ contact.Q3O3 }}
+                                                           </label>
+                                                        </div>
+                                                        <div class="form-check-inline">
+                                                              <label class="form-check-label" for="radio12">
+                                                              <input type="radio" class="form-check-input" id="radio12" name="optradio3"
+                                                               [(ngModel)]="contact.C1" value="{{ contact.Q3O4 }}" >{{ contact.Q3O4 }}
+                                                              </label>
+                                                           </div>
+                                    </div>
                                
-                                <div class="row">
-                                   <div class="col-md-6">
-                                      <div class="input-group">
-                                         <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                               <input type="radio"
-                                                  aria-label="Radio button for following text input">
-                                            </div>
-                                         </div>
-                                         <input type="text" class="form-control"
-                                         aria-label="Text input with radio button" id="Q3O1TextField"
-                                         placeholder="Enter Question Here " name="Q3O1TextField"
-                                         [(ngModel)]="contact.Q3O1" value="{{ contact.Q3O1 }}">
-                                      </div>
-                                      <div class="input-group">
-                                         <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                               <input type="radio"
-                                                  aria-label="Radio button for following text input">
-                                            </div>
-                                         </div>
-                                         <input type="text" class="form-control"
-                                         aria-label="Text input with radio button" id="Q3O2TextField"
-                                         placeholder="Enter Question Here " name="Q3O2TextField"
-                                         [(ngModel)]="contact.Q3O2" value="{{ contact.Q3O2 }}">
-                                      </div>
-                                   </div>
-                                   <div class="col-md-6">
-                                      <div class="input-group">
-                                         <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                               <input type="radio"
-                                                  aria-label="Radio button for following text input">
-                                            </div>
-                                         </div>
-                                         <input type="text" class="form-control"
-                                         aria-label="Text input with radio button" id="Q3O3TextField"
-                                         placeholder="Enter Question Here " name="Q3O3TextField"
-                                         [(ngModel)]="contact.Q3O3" value="{{ contact.Q3O3 }}">
-                                      </div>
-                                      <div class="input-group">
-                                         <div class="input-group-prepend">
-                                            <div class="input-group-text">
-                                               <input type="radio"
-                                                  aria-label="Radio button for following text input">
-                                            </div>
-                                         </div>
-                                         <input type="text" class="form-control"
-                                         aria-label="Text input with radio button" id="Q3O4TextField"
-                                         placeholder="Enter Question Here " name="Q3O4TextField"
-                                         [(ngModel)]="contact.Q3O4" value="{{ contact.Q3O4 }}">
-                                      </div>
-                                   </div>
-                                </div>
-                            
-                                
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                       
+                              
+                              </div>
+                          
+                              
+                           </div>
+                        </div>
+                     </div>
+                  </div>
               <!-- Question 3 -->
-              <div *ngIf="status" class="row">
-                 <div class="col-md-4">
-                    Status :
-                    <div class="onoffswitch">
-                       <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked  
-                       [(ngModel)]="contact.status" value="{{ contact.status }}">
-                       <label class="onoffswitch-label" for="myonoffswitch">
-                           <span class="onoffswitch-inner"></span>
-                           <span class="onoffswitch-switch"></span>
-                       </label>
-                   </div>
-                 </div>
-              </div>
+             
                  <button type="submit" class="btn btn-primary">
-             <i class="fas fa-edit"></i> {{ title }}</button>
-             <a routerLink="/contact/contact-list" class="btn btn-warning">
+             <i class="fas fa-edit"></i> Submit the Survey</button>
+             <a routerLink="/home" class="btn btn-warning">
              <i class="fas fa-undo"></i> Cancel</a>
           </form>
        </div>

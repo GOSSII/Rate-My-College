@@ -7,10 +7,10 @@ Date 29, March 2019
 
 import { Component, OnInit } from '@angular/core';
 import { FlashMessagesService } from 'angular2-flash-messages';
-import { AuthService } from 'src/app/services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
-import { User } from 'src/app/models/user';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-header',

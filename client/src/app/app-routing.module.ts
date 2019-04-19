@@ -27,13 +27,13 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { Survey1Component } from './survey1/survey1.component';
 import { TestComponent } from './test/test.component';
 import { TakeSurveyComponent } from './take-survey/take-survey.component';
-
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, data: {title: 'Home'}},
   {path: 'takesurvey', component: TakeSurveyComponent, data: {title: 'Take Survey'}},
   {path: 'takesurvey/:id', component: TakeSurveyComponent, data: {title: 'Take Survey'}},
-
+  {path: 'thankyou', component: ThankyouComponent, data: {title: 'Thank you'}},
 
 
   {path: 'admin', component: AdminDashboardComponent, data: {title: 'admin'} ,canActivate: [AuthGuard]},

@@ -44,10 +44,9 @@ export class SurveyService {
   }
 
  
-  // public addContact(contact: Contact): Observable<any> {
-    
-  //   return this.http.post<any>(this.endpoint + 'add', contact, this.httpOptions);
-  // }
+  public addContact(contact: Contact): Observable<any> {
+    return this.http.post<any>(this.endpoint + 'add/' + contact._id, contact, this.httpOptions);
+  }
 
   
 }

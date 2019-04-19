@@ -29,8 +29,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
 import { ContactDeleteComponent } from './contacts/contact-delete/contact-delete.component';
-import { SurveyComponent } from './test/survey.component';
-import { SurveyCreatorComponent } from './test/survey.creator.component';
+// import { SurveyComponent } from './test/survey.component';
+// import { SurveyCreatorComponent } from './test/survey.creator.component';
 
 // Services
 import { FlashMessagesModule, FlashMessagesService } from 'angular2-flash-messages';
@@ -44,6 +44,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { Survey1Component } from './survey1/survey1.component';
 import { TestComponent } from './test/test.component';
 import { TakeSurveyComponent } from './take-survey/take-survey.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 export function jwtTokenGetter() {
   return localStorage.getItem('id_token');
@@ -68,10 +69,12 @@ export function jwtTokenGetter() {
     ContactDeleteComponent,
     AdminDashboardComponent,
     UserProfileComponent,
-    Survey1Component, SurveyComponent,
-    SurveyCreatorComponent,
+    Survey1Component,
+    //  SurveyComponent,
+    // SurveyCreatorComponent,
     TestComponent,
     TakeSurveyComponent,
+    ThankyouComponent,
   ],
   imports: [
     BrowserModule,

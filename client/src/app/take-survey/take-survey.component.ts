@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 // import { Contact } from 'src/app/models/contact';
 import { Contact } from '../models/contact';
-
+import { surveyResponse } from '../models/surveyResponse';
 @Component({
   selector: 'app-take-survey',
   templateUrl: './take-survey.component.html',
@@ -15,6 +15,9 @@ import { Contact } from '../models/contact';
 export class TakeSurveyComponent implements OnInit {
   title: string;
   contact: Contact;
+  surveyresponse = new surveyResponse();
+
+
   constructor( private activatedRoute: ActivatedRoute,
     private flashMessage: FlashMessagesService,
     private SurveyService: SurveyService,
@@ -40,5 +43,14 @@ export class TakeSurveyComponent implements OnInit {
   }
   onDetailsPageSubmit(): void {
     console.log("back -> ", this.contact);
+    this.SurveyService.addContact(this.contact).subscribe(data => {
+      if (data.success) {
+        this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});
+        this.router.navigate(['/thankyou']);
+      } else {
+        this.flashMessage.show('Add Todo Failed', {cssClass: 'alert-danger', timeOut: 3000});
+        this.router.navigate(['/home']);
+      }
+    });
   }
 }
