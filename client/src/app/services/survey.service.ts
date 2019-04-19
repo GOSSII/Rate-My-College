@@ -18,7 +18,7 @@ import { User } from '../models/user';
 })
 export class SurveyService {
   private user: User;
-
+  private authToken: any = null;
 
    private endpoint = 'http://localhost:3000/api/takesurvey/';
   // private endpoint = 'https://career-portfolio-mean-stack.herokuapp.com/api/todo/';
@@ -27,8 +27,7 @@ export class SurveyService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-      'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
     })
   };
 
@@ -39,14 +38,25 @@ export class SurveyService {
   public getActiveSurvey(): Observable<any> {
     return this.http.get<any>(this.endpoint, this.httpOptions);
   }
+
   public getContact(contact: Contact): Observable<any> {
     return this.http.get<any>(this.endpoint +  contact._id, this.httpOptions);
   }
 
- 
   public addContact(contact: Contact): Observable<any> {
     return this.http.post<any>(this.endpoint + 'add/' + contact._id, contact, this.httpOptions);
   }
 
+  public getReports(contact: Contact): Observable<any> {
+    this.loadToken();
+    return this.http.get<any>(this.endpoint + 'report/' + contact,  this.httpOptions);
+  }
+
+
+  private loadToken() {
+    const token = localStorage.getItem('id_token');
+    this.authToken = token;
+    this.httpOptions.headers = this.httpOptions.headers.set('Authorization', this.authToken);
+  }
   
 }

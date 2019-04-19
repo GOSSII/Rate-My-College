@@ -28,6 +28,7 @@ import { Survey1Component } from './survey1/survey1.component';
 import { TestComponent } from './test/test.component';
 import { TakeSurveyComponent } from './take-survey/take-survey.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import { ReportComponent } from './report/report.component'
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent, data: {title: 'Home'}},
@@ -40,6 +41,7 @@ const routes: Routes = [
   {path: 'UserProfile', component: UserProfileComponent, data: {title: 'UserProfile'} ,canActivate: [AuthGuard]},
   {path: 'Survey1', component: Survey1Component, data: {title: 'Survey1'} ,canActivate: [AuthGuard]},
   {path: 'test', component: TestComponent, data: {title: 'Survey1'} ,canActivate: [AuthGuard]},
+  {path: 'report/:id', component: ReportComponent, data: {title: 'Survey Report'} ,canActivate: [AuthGuard]},
 
   {path: 'about', component: AboutComponent, data: {title: 'About'}},
   {path: 'products', component: ProductsComponent, data: {title: 'Products'}},

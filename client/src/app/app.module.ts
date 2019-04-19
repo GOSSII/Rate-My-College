@@ -45,6 +45,7 @@ import { Survey1Component } from './survey1/survey1.component';
 import { TestComponent } from './test/test.component';
 import { TakeSurveyComponent } from './take-survey/take-survey.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import { ReportComponent } from './report/report.component';
 
 export function jwtTokenGetter() {
   return localStorage.getItem('id_token');
@@ -75,6 +76,7 @@ export function jwtTokenGetter() {
     TestComponent,
     TakeSurveyComponent,
     ThankyouComponent,
+    ReportComponent,
   ],
   imports: [
     BrowserModule,
