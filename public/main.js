@@ -156,9 +156,9 @@ var routes = [
     { path: 'services', component: _pages_services_services_component__WEBPACK_IMPORTED_MODULE_6__["ServicesComponent"], data: { title: 'Services' } },
     { path: 'contact', component: _pages_contact_contact_component__WEBPACK_IMPORTED_MODULE_7__["ContactComponent"], data: { title: 'Contact' } },
     { path: 'contact/contact-list', component: _contacts_contact_list_contact_list_component__WEBPACK_IMPORTED_MODULE_9__["ContactListComponent"], data: { title: 'Contact List' }, canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
-    { path: 'contact/contact-list/add', component: _contacts_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_10__["ContactDetailsComponent"], data: { title: 'Add Todo' }, canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
-    { path: 'contact/contact-list/edit/:id', component: _contacts_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_10__["ContactDetailsComponent"], data: { title: 'Edit Todo' }, canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
-    { path: 'contact/contact-list/delete/:id', component: _contacts_contact_delete_contact_delete_component__WEBPACK_IMPORTED_MODULE_11__["ContactDeleteComponent"], data: { title: 'Add Todo' }, canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
+    { path: 'contact/contact-list/add', component: _contacts_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_10__["ContactDetailsComponent"], data: { title: 'Add Survey' }, canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
+    { path: 'contact/contact-list/edit/:id', component: _contacts_contact_details_contact_details_component__WEBPACK_IMPORTED_MODULE_10__["ContactDetailsComponent"], data: { title: 'Edit Survey' }, canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
+    { path: 'contact/contact-list/delete/:id', component: _contacts_contact_delete_contact_delete_component__WEBPACK_IMPORTED_MODULE_11__["ContactDeleteComponent"], data: { title: 'Add Survey' }, canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
     { path: 'register', component: _pages_register_register_component__WEBPACK_IMPORTED_MODULE_12__["RegisterComponent"], data: { title: 'Register' } },
     { path: 'login', component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_13__["LoginComponent"], data: { title: 'Register' } },
     { path: 'logout', redirectTo: '/login', pathMatch: 'full' },
@@ -536,7 +536,7 @@ var ContactDetailsComponent = /** @class */ (function () {
         this.activatedRoute.params.subscribe(function (params) {
             _this.contact._id = params.id;
         });
-        if (this.title === 'Edit Todo') {
+        if (this.title === 'Edit Survey') {
             this.status = true;
             this.getContact(this.contact);
         }
@@ -551,7 +551,7 @@ var ContactDetailsComponent = /** @class */ (function () {
     ContactDetailsComponent.prototype.onDetailsPageSubmit = function () {
         var _this = this;
         switch (this.title) {
-            case 'Add Todo':
+            case 'Add Survey':
                 // console.log("this.contact", this.contact)
                 var k = JSON.parse(localStorage.getItem('user'));
                 // console.log("dsd",k.id);
@@ -579,7 +579,7 @@ var ContactDetailsComponent = /** @class */ (function () {
                     }
                 });
                 break;
-            case 'Edit Todo':
+            case 'Edit Survey':
                 // console.log("Edited doc -> ", this.contact);
                 this.contactListService.editContact(this.contact).subscribe(function (data) {
                     if (data.success) {

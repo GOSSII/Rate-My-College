@@ -49,10 +49,10 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent, data: {title: 'Contact'}},
   {path: 'contact/contact-list', component: ContactListComponent, data: {title: 'Contact List'}, canActivate: [AuthGuard]},
 
-  {path: 'contact/contact-list/add', component: ContactDetailsComponent, data: {title: 'Add Todo'}, canActivate: [AuthGuard]},
-  {path: 'contact/contact-list/edit/:id', component: ContactDetailsComponent, data: {title: 'Edit Todo'}, canActivate: [AuthGuard]},
-  {path: 'contact/contact-list/delete/:id', component: ContactDeleteComponent, data: {title: 'Add Todo'}, canActivate: [AuthGuard]},
-
+  {path: 'contact/contact-list/add', component: ContactDetailsComponent, data: {title: 'Add Survey'}, canActivate: [AuthGuard]},
+  {path: 'contact/contact-list/edit/:id', component: ContactDetailsComponent, data: {title: 'Edit Survey'}, canActivate: [AuthGuard]},
+  {path: 'contact/contact-list/delete/:id', component: ContactDeleteComponent, data: {title: 'Add Survey'}, canActivate: [AuthGuard]},
+ 
   {path: 'register', component: RegisterComponent, data: {title: 'Register'}},
   {path: 'login', component: LoginComponent, data: {title: 'Register'}},
   {path: 'logout', redirectTo: '/login', pathMatch: 'full'},

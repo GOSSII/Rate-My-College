@@ -31,7 +31,7 @@ export class ContactDetailsComponent implements OnInit {
     });
 
   
-    if (this.title === 'Edit Todo') {
+    if (this.title === 'Edit Survey') {
       this.status = true;
       this.getContact(this.contact);
     }
@@ -47,7 +47,7 @@ export class ContactDetailsComponent implements OnInit {
   onDetailsPageSubmit(): void {
 
     switch (this.title) {
-      case 'Add Todo':
+      case 'Add Survey':
       // console.log("this.contact", this.contact)
       let k = JSON.parse(localStorage.getItem('user'));
       // console.log("dsd",k.id);
@@ -75,7 +75,7 @@ export class ContactDetailsComponent implements OnInit {
       });
       break;
 
-      case 'Edit Todo':
+      case 'Edit Survey':
      // console.log("Edited doc -> ", this.contact);
       this.contactListService.editContact(this.contact).subscribe(data => {
         if (data.success) {
