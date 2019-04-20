@@ -4,6 +4,7 @@ let jwt = require('jsonwebtoken');
 
 // create a reference to the db schema
 let TODOModel = require('../models/toDo');
+let surveyResponse = require('../models/surveyResponse');
 
 module.exports.displayToDoList = (req, res, next) => {
     let id = req.params.id;
@@ -168,15 +169,17 @@ module.exports.processEditPage = (req, res, next) => {
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
 
+    console.log("delte thao a",id);
     TODOModel.remove({_id: id}, (err) => {
+        surveyResponse.remove({survey_id: id}, (err) => {
         if(err) {
             console.log(err);
             res.end(err);
         }
         else {
-            // refresh the contact list
-            //  res.redirect('/todo');
             res.json({success: true, msg: 'Successfully Deleeted Task'});
-        }
+       
+    }
+});
     });
 }
