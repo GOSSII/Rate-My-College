@@ -30,7 +30,6 @@ export class HomeComponent implements OnInit {
 
   displayContactList(): void {
     this.surveyService.getActiveSurvey().subscribe(data => {
-      console.log("ds-> ", data);
       if(data.success) {
         this.contacts = data.SurveyList;
       } else {

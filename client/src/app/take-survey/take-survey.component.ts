@@ -45,10 +45,10 @@ export class TakeSurveyComponent implements OnInit {
     console.log("back -> ", this.contact);
     this.SurveyService.addContact(this.contact).subscribe(data => {
       if (data.success) {
-        this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});
+        //this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});
         this.router.navigate(['/thankyou']);
       } else {
-        this.flashMessage.show('Add Todo Failed', {cssClass: 'alert-danger', timeOut: 3000});
+        //this.flashMessage.show('Add Todo Failed', {cssClass: 'alert-danger', timeOut: 3000});
         this.router.navigate(['/home']);
       }
     });
