@@ -78,11 +78,11 @@ module.exports.postSurveyResponse = (req, res, next) => {
                 o1: req.body.A1,
             },{
                 question: req.body.Q2,
-                o1: req.body.B1,
+                o1: req.body.A2,
             },
             {
                 question: req.body.Q3,
-                o1: req.body.C1,
+                o1: req.body.A3,
             }]
         });
     

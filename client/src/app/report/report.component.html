@@ -2,12 +2,14 @@
 <div *ngIf="status">
     dsdsdcs
   </div>
-  <div class="container">
+ 
+  <button class="btn btn-primary btn-block text-uppercase" value="Export As PDF"
+  (click)="captureScreen()">export as pdf</button>
+  <div class="container" id="contentToConvert">
     <h2>Report of {{ contact. title }}</h2>
-    <div class="user">{{ contact.users}} User Participate</div>
+    <div class="user">{{ contact.users}} Users Participate</div>
     <p>{{ contact.desc}}</p>
-    
-    <div class="row">
+    <div class="row" >
       <div class="col-md-12">
         <div class="question">
           <h4> Q.1 ) {{ contact.Question_1}} </h4>
