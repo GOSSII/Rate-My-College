@@ -39,7 +39,7 @@ export class ContactDeleteComponent implements OnInit {
         this.flashMessage.show(data.msg, {cssClass: 'alert-warning', timeOut: 3000});
         this.router.navigate(['/contact/contact-list']);
       } else {
-        this.flashMessage.show('Delete ToDo Failed', {cssClass: 'alert-danger', timeOut: 3000});
+        this.flashMessage.show('Delete Survey Failed', {cssClass: 'alert-danger', timeOut: 3000});
         this.router.navigate(['/contact/contact-list']);
       }
     });

@@ -42,7 +42,7 @@ export class TakeSurveyComponent implements OnInit {
     });
   }
   onDetailsPageSubmit(): void {
-    console.log("back -> ", this.contact);
+    //console.log("back -> ", this.contact);
     this.SurveyService.addContact(this.contact).subscribe(data => {
       if (data.success) {
         //this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});

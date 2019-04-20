@@ -453,7 +453,7 @@ var ContactDeleteComponent = /** @class */ (function () {
                 _this.router.navigate(['/contact/contact-list']);
             }
             else {
-                _this.flashMessage.show('Delete ToDo Failed', { cssClass: 'alert-danger', timeOut: 3000 });
+                _this.flashMessage.show('Delete Survey Failed', { cssClass: 'alert-danger', timeOut: 3000 });
                 _this.router.navigate(['/contact/contact-list']);
             }
         });
@@ -574,7 +574,7 @@ var ContactDetailsComponent = /** @class */ (function () {
                         _this.router.navigate(['/contact/contact-list']);
                     }
                     else {
-                        _this.flashMessage.show('Add Todo Failed', { cssClass: 'alert-danger', timeOut: 3000 });
+                        _this.flashMessage.show('Add Survey Failed', { cssClass: 'alert-danger', timeOut: 3000 });
                         _this.router.navigate(['/contact/contact-list']);
                     }
                 });
@@ -587,7 +587,7 @@ var ContactDetailsComponent = /** @class */ (function () {
                         _this.router.navigate(['/contact/contact-list']);
                     }
                     else {
-                        _this.flashMessage.show('Edit Todo Failed', { cssClass: 'alert-danger', timeOut: 3000 });
+                        _this.flashMessage.show('Edit Survey Failed', { cssClass: 'alert-danger', timeOut: 3000 });
                         _this.router.navigate(['/contact/contact-list']);
                     }
                 });
@@ -2198,7 +2198,7 @@ var TakeSurveyComponent = /** @class */ (function () {
     };
     TakeSurveyComponent.prototype.onDetailsPageSubmit = function () {
         var _this = this;
-        console.log("back -> ", this.contact);
+        //console.log("back -> ", this.contact);
         this.SurveyService.addContact(this.contact).subscribe(function (data) {
             if (data.success) {
                 //this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});
@@ -2423,14 +2423,14 @@ var UserProfileComponent = /** @class */ (function () {
     };
     UserProfileComponent.prototype.onDetailsPageSubmit = function () {
         var _this = this;
-        console.log("data", this.User);
+        //console.log("data", this.User);
         this.UserListService.editContact(this.User).subscribe(function (data) {
             if (data.success) {
                 _this.flashMessage.show(data.msg, { cssClass: 'alert-success', timeOut: 3000 });
                 _this.router.navigate(['/UserProfile']);
             }
             else {
-                _this.flashMessage.show('Edit Todo Failed', { cssClass: 'alert-danger', timeOut: 3000 });
+                _this.flashMessage.show('Something Went Wrong', { cssClass: 'alert-danger', timeOut: 3000 });
                 _this.router.navigate(['/admin']);
             }
         });

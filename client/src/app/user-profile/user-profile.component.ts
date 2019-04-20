@@ -38,13 +38,13 @@ export class UserProfileComponent implements OnInit {
   }
 
   onDetailsPageSubmit(): void {
-    console.log("data", this.User);
+    //console.log("data", this.User);
     this.UserListService.editContact(this.User).subscribe(data => {
       if (data.success) {
         this.flashMessage.show(data.msg, {cssClass: 'alert-success', timeOut: 3000});
         this.router.navigate(['/UserProfile']);
       } else {
-        this.flashMessage.show('Edit Todo Failed', {cssClass: 'alert-danger', timeOut: 3000});
+        this.flashMessage.show('Something Went Wrong', {cssClass: 'alert-danger', timeOut: 3000});
         this.router.navigate(['/admin']);
       }
     });
