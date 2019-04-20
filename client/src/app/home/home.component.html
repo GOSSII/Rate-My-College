@@ -9,10 +9,10 @@
         <div class="col-md-4 col-xs-12" *ngFor="let contact of contacts">
             <div class="card ">
                 <div class="card-header">
-                  Featured
+                    <h5 class="card-title">{{ contact.title }}</h5>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">{{ contact.title }}</h5>
+                    
                     <p class="card-text">{{ contact.desc }}</p>
                     <!-- <a href="#" class="btn btn-primary">Take The Survey</a> -->
                     <a routerLink="/takesurvey/{{ contact._id }}"

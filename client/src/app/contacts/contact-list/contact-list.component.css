@@ -6,3 +6,10 @@
     background-color: rgba(245, 245, 245, 1);
     opacity: .4;
 }
+.card-body a{
+width: 45%;
+margin-right: 10px;
+}
+.delete{
+    width: 95%;
+}
