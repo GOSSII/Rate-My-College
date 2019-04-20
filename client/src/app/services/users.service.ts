@@ -21,7 +21,7 @@ export class UserListService {
   private authToken: any = null;
 
   // private endpoint = 'http://localhost:3000/api/users/';
-   private endpoint = 'https://ratemycolleges.herokuapp.com/api/todo/';
+   private endpoint = 'https://ratemycolleges.herokuapp.com/api/users/';
 
   private httpOptions = {
     headers: new HttpHeaders({
