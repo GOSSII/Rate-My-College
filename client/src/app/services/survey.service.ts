@@ -20,8 +20,8 @@ export class SurveyService {
   private user: User;
   private authToken: any = null;
 
-   private endpoint = 'http://localhost:3000/api/takesurvey/';
-  // private endpoint = 'https://ratemycolleges.herokuapp.com/api/takesurvey/';
+  // private endpoint = 'http://localhost:3000/api/takesurvey/';
+   private endpoint = 'https://ratemycolleges.herokuapp.com/api/takesurvey/';
 
   private httpOptions = {
     headers: new HttpHeaders({

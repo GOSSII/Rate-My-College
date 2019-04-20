@@ -1,10 +1,102 @@
 <div class="container">
+<div class="wrapper">
+        <div class="page_titile">
+          <h3>Admin Dashboard</h3>
+        </div>
+        <div class="container">
+          <h3>Create Survey</h3>
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="card">
+                <h5 class="card-header">Free</h5>
+                <div class="card-body">
+                  <h5 class="card-title">MCQ Survey Template</h5>
+                  <p class="card-text">Ask people about their experience base on Close-ended Questions.</p>
+                  <a href="/contact/contact-list/add" class="btn btn-primary"> C R E A T E</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="card">
+                  <h5 class="card-header">Free</h5>
+                  <div class="card-body">
+                    <h5 class="card-title">Agree/Disagre Survey Template</h5>
+                    <p class="card-text">Ask people's opinion base on Quick poll Questions.</p>
+                    <a href="/contact/contact-list/add" class="btn btn-primary">C R E A T E</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="card special-card">
+                    <h5 class="card-header">Featured</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Custom Survey Template</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary" >C R E A T E</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+
+          <hr>
+          <h3>Recent surveys</h3>
+          <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12" *ngFor="let contact of contacts">
+                  <div class="card">
+                    <h5 class="card-header">{{ contact.title }}</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">{{ contact.desc }}</h5>
+                      <a routerLink="/contact/contact-list/edit/{{ contact._id }}"
+                      class="btn btn-primary">E D I T</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                            2 days ago
+                          </div>
+                  </div>
+                </div>
+                </div>
+
+
+
+        </div>
+      </div>
+ 
+
+
+
+ 
+
+
+
+
+
+
+<div class="">
   <div class="row">
       <div class="col-md-offset-3 col-md-6">
-          <h1>TODO List</h1>
+          <h3>Recent surveys</h3>
           <a class="btn btn-primary" routerLink="/contact/contact-list/add" role="button">
           <i class="fas fa-plus-circle"></i> Add a Task</a>
           <br>
+
+
+          <div class="row">
+              <div class="col-md-4">
+          <div class="card text-center" *ngFor="let contact of contacts">
+                <div class="card-header">
+                        {{ contact.title }}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer text-muted">
+                  2 days ago
+                </div>
+              </div>
+            </div></div>
+
           <table class="table table-bordered table-striped table-hover">
               <!-- Header Row-->
               <tr>
@@ -41,4 +133,5 @@
 
       </div>
   </div>
+</div>
 </div>

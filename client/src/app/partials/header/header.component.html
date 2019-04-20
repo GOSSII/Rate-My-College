@@ -43,14 +43,12 @@ Date 29, March 2019
         >
       </li> -->
       <li *ngIf="isLoggedIn()" class="nav-item">
-        <a class="nav-link" routerLink="/admin"
+        <a class="nav-link" routerLink="/contact/contact-list"
           ><i class="fa fa-lg fa-archway"></i> Dashboard</a
         >
       </li> 
 
-      <li *ngIf="isLoggedIn()" class="navbar-text text-success ml-5 mr-5 d-none d-lg-inline"><i class="fas fa-lg fa-user"></i>
-        Welcome, {{ user.displayName }}</li>
-
+     
         <li *ngIf="isLoggedIn()" class="nav-item"><a routerLink="/UserProfile" class="nav-link">
           <i class="fa fa-lg fa-user-circle"></i> Profile</a></li>
 
@@ -59,6 +57,10 @@ Date 29, March 2019
 
       <li *ngIf="!isLoggedIn()" class="nav-item"><a routerLink="/login" class="nav-link">
         <i class="fa fa-lg fa-sign-in-alt"></i> Login</a></li>
+
+        <li *ngIf="isLoggedIn()" class="navbar-text text-success ml-5 mr-5 d-none d-lg-inline"><i class="fas fa-lg fa-user"></i>
+          Welcome, {{ user.displayName }}</li>
+  
 
     </ul>
   </div>
