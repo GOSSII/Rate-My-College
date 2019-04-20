@@ -20,7 +20,7 @@ module.exports.displayToDoList = (req, res, next) => {
             //     toDoList: toDoList,
             //     displayName: req.user ? req.user.displayName : ""
             // });
-            res.json({success: true, msg: 'ToDo List Displayed Successfully', SurveyList: SurveyList});
+            res.json({success: true, msg: 'Survey List Displayed Successfully', SurveyList: SurveyList});
         }
     });
 };
@@ -73,7 +73,7 @@ console.log("sas", req.body);
         }
         else {
             // res.redirect('/todo');
-            res.json({success: true, msg: 'Successfully Added New Task'});
+            res.json({success: true, msg: 'Successfully Added New Survey'});
         }
     });
     
@@ -116,7 +116,7 @@ module.exports.displayEditPage = (req, res, next) => {
                 status: ToDOObject.status
 
             });
-            res.json({success: true, msg: 'Successfully Displayed Task to Edit', todo: object});
+            res.json({success: true, msg: 'Successfully Displayed Survey to Edit', todo: object});
         }
     });
 
@@ -161,7 +161,7 @@ module.exports.processEditPage = (req, res, next) => {
         else {
             // refresh the contact list
             //  res.redirect('/todo');
-            res.json({success: true, msg: 'Successfully Edited Task', contact: updatedContact});
+            res.json({success: true, msg: 'Successfully Edited Survey', contact: updatedContact});
         }
     })
 }
@@ -177,7 +177,7 @@ module.exports.performDelete = (req, res, next) => {
             res.end(err);
         }
         else {
-            res.json({success: true, msg: 'Successfully Deleeted Task'});
+            res.json({success: true, msg: 'Successfully Deleted Survey'});
        
     }
 });

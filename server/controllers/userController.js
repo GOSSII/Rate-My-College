@@ -50,7 +50,7 @@ if(req.body){
       res.end(err);
   }
   else {
-      res.json({success: true, msg: 'Successfully Edited Task'});
+      res.json({success: true, msg: 'Successfully Edited User Profile'});
   }
   })
 }else{

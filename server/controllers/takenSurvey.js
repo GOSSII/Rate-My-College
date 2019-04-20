@@ -15,7 +15,7 @@ module.exports.getActiveSurvey = (req, res, next) => {
             res.send(err);
         }
         else {
-            res.json({success: true, msg: 'ToDo List Displayed Successfully', SurveyList: SurveyList});
+            res.json({success: true, msg: 'Active Survey List Displayed Successfully', SurveyList: SurveyList});
         }
     });
 }
@@ -58,7 +58,7 @@ module.exports.getActiveSurveyById = (req, res, next) => {
                 status: ToDOObject.status
 
             });
-            res.json({success: true, msg: 'Successfully Displayed Task to Edit', todo: object});
+            res.json({success: true, msg: 'Successfully Displayed Survey to Edit', todo: object});
         }
     });
 };
@@ -93,7 +93,7 @@ module.exports.postSurveyResponse = (req, res, next) => {
             }
             else {
                 // res.redirect('/todo');
-                res.json({success: true, msg: 'Successfully Added New Task'});
+                res.json({success: true, msg: 'Successfully Added New Survey'});
             }
         });
 }
@@ -208,19 +208,31 @@ module.exports.getReportById = (req, res, next) => {
                             })
                             // convert the response in percentage 
                             let Q1A1 = Q1_Res_1 / users * 100;
+                            Q1A1 = +Q1A1.toFixed(2);
                             let Q1A2 = Q1_Res_2 / users * 100;
+                            Q1A2 = +Q1A2.toFixed(2);
                             let Q1A3 = Q1_Res_3 / users * 100;
+                            Q1A3 = +Q1A3.toFixed(2);
                             let Q1A4 = Q1_Res_4 / users * 100;
+                            Q1A4 = +Q1A4.toFixed(2);
 
                             let Q2A1 = Q2_Res_1 / users * 100;
+                            Q2A1 = +Q2A1.toFixed(2);
                             let Q2A2 = Q2_Res_2 / users * 100;
+                            Q2A2 = +Q2A2.toFixed(2);
                             let Q2A3 = Q2_Res_3 / users * 100;
+                            Q2A3 = +Q2A3.toFixed(2);
                             let Q2A4 = Q2_Res_4 / users * 100;
+                            Q2A4 = +Q2A4.toFixed(2);
                             
                             let Q3A1 = Q3_Res_1 / users * 100;
+                            Q3A1 = +Q3A1.toFixed(2);
                             let Q3A2 = Q3_Res_2 / users * 100;
+                            Q3A2 = +Q3A2.toFixed(2);
                             let Q3A3 = Q3_Res_3 / users * 100;
+                            Q3A3 = +Q3A3.toFixed(2);
                             let Q3A4 = Q3_Res_4 / users * 100;
+                            Q3A4 = +Q3A4.toFixed(2);
 
                             let result = {
                                 title,
