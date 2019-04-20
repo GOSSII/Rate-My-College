@@ -43,3 +43,8 @@
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
 }
+.questionrow .input-group{
+    width: 100%;
+    padding-left: 5%;
+    padding-bottom: 5px;
+}
