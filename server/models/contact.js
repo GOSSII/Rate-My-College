@@ -1,6 +1,11 @@
-// Name: Dipeshpuri Goswami
-// Id: 300984229 
-// Date 16, Feb 2019 
+
+// Wep App - Black dot
+// Description - BlackDot is to create surveys for the college and ask user to respond on in.
+
+// Dipeshpuri Goswami - 300984229
+// Sanket Vagadiya - 300991500
+// Ishrat Vahora - 30098257
+// Manthan Shah - 300990910
 
 let mongoose = require('mongoose');
 

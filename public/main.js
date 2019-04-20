@@ -111,13 +111,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _take_survey_take_survey_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./take-survey/take-survey.component */ "./src/app/take-survey/take-survey.component.ts");
 /* harmony import */ var _thankyou_thankyou_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./thankyou/thankyou.component */ "./src/app/thankyou/thankyou.component.ts");
 /* harmony import */ var _report_report_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./report/report.component */ "./src/app/report/report.component.ts");
-/*
-Project: Career-Portfolio-MEAN-STACK
-Name: Dipeshpuri Goswami
-Id: 300984229
-Date 29, March 2019
-*/
+// Wep App - Black dot
+// Description - BlackDot is to create surveys for the college and ask user to respond on in.
 
+// Dipeshpuri Goswami - 300984229
+// Sanket Vagadiya - 300991500
+// Ishrat Vahora - 30098257
+// Manthan Shah - 300990910
 // Modules
 
 
@@ -515,7 +515,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _models_contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../models/contact */ "./src/app/models/contact.ts");
+// Wep App - Black dot
+// Description - BlackDot is to create surveys for the college and ask user to respond on in.
 
+// Dipeshpuri Goswami - 300984229
+// Sanket Vagadiya - 300991500
+// Ishrat Vahora - 30098257
+// Manthan Shah - 300990910
 
 
 
@@ -650,7 +656,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angular2-flash-messages */ "./node_modules/angular2-flash-messages/module/index.js");
 /* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+// Wep App - Black dot
+// Description - BlackDot is to create surveys for the college and ask user to respond on in.
 
+// Dipeshpuri Goswami - 300984229
+// Sanket Vagadiya - 300991500
+// Ishrat Vahora - 30098257
+// Manthan Shah - 300990910
 
 // import { ContactListService } from 'src/app/services/contact-list.service';
 
@@ -783,7 +795,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angular2-flash-messages */ "./node_modules/angular2-flash-messages/module/index.js");
 /* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+// Wep App - Black dot
+// Description - BlackDot is to create surveys for the college and ask user to respond on in.
 
+// Dipeshpuri Goswami - 300984229
+// Sanket Vagadiya - 300991500
+// Ishrat Vahora - 30098257
+// Manthan Shah - 300990910
 
 // import { ContactListService } from 'src/app/services/contact-list.service';
 
@@ -857,6 +875,12 @@ var Contact = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "surveyResponse", function() { return surveyResponse; });
+// Wep App - Black dot
+// Description - BlackDot is to create surveys for the college and ask user to respond on in.
+// Dipeshpuri Goswami - 300984229
+// Sanket Vagadiya - 300991500
+// Ishrat Vahora - 30098257
+// Manthan Shah - 300990910
 var surveyResponse = /** @class */ (function () {
     function surveyResponse() {
     }
@@ -877,6 +901,12 @@ var surveyResponse = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+// Wep App - Black dot
+// Description - BlackDot is to create surveys for the college and ask user to respond on in.
+// Dipeshpuri Goswami - 300984229
+// Sanket Vagadiya - 300991500
+// Ishrat Vahora - 30098257
+// Manthan Shah - 300990910
 var User = /** @class */ (function () {
     function User() {
     }
@@ -2165,7 +2195,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _models_contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../models/contact */ "./src/app/models/contact.ts");
 /* harmony import */ var _models_surveyResponse__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../models/surveyResponse */ "./src/app/models/surveyResponse.ts");
+// Wep App - Black dot
+// Description - BlackDot is to create surveys for the college and ask user to respond on in.
 
+// Dipeshpuri Goswami - 300984229
+// Sanket Vagadiya - 300991500
+// Ishrat Vahora - 30098257
+// Manthan Shah - 300990910
 
 // import { ContactListService } from 'src/app/services/contact-list.service';
 
@@ -2315,7 +2351,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <br />\n    <br />\n    <div class=\"card text-center\">\n  \n      <div class=\"card-body\">\n        <h1 class=\"display-4\">Thank you for your response.</h1>\n        <hr class=\"my-4\">\n  \n        <br />\n        <p>Your response is successfully submitted.</p>\n  \n        <br />\n        <a class=\"btn btn-outline-dark btn-lg\" routerLink=\"/home\" role=\"button\">Try more Survey</a>\n        <br />\n      </div>\n      <div class=\"card-footer text-muted\">\n        Powered by: B L A C K D O T\n      </div>\n    </div>\n  </div>"
+module.exports = "<!-- // Wep App - Black dot\n// Description - BlackDot is to create surveys for the college and ask user to respond on in.\n\n// Dipeshpuri Goswami - 300984229\n// Sanket Vagadiya - 300991500\n// Ishrat Vahora - 30098257\n// Manthan Shah - 300990910 -->\n\n\n<div class=\"container\">\n    <br />\n    <br />\n    <div class=\"card text-center\">\n  \n      <div class=\"card-body\">\n        <h1 class=\"display-4\">Thank you for your response.</h1>\n        <hr class=\"my-4\">\n  \n        <br />\n        <p>Your response is successfully submitted.</p>\n  \n        <br />\n        <a class=\"btn btn-outline-dark btn-lg\" routerLink=\"/home\" role=\"button\">Try more Survey</a>\n        <br />\n      </div>\n      <div class=\"card-footer text-muted\">\n        Powered by: B L A C K D O T\n      </div>\n    </div>\n  </div>"
 
 /***/ }),
 
